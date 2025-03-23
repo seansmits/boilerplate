@@ -76,11 +76,10 @@ export default function PortfolioGrid() {
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                filter === category
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${filter === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -103,8 +102,8 @@ export default function PortfolioGrid() {
                   <Image
                     src={project.imageUrl || "/placeholder.svg"}
                     alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: "cover" }}
                     className="transition-transform duration-300 ease-in-out group-hover:scale-105"
                   />
                   <motion.div
